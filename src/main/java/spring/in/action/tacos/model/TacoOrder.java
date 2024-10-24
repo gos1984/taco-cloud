@@ -1,5 +1,8 @@
 package spring.in.action.tacos.model;
 
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 import lombok.Data;
@@ -10,7 +13,12 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
-public class TacoOrder {
+public class TacoOrder implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private Long id;
+    private LocalDateTime placedAt;
 
     @NotBlank(message="Delivery name is required")
     private String deliveryName;

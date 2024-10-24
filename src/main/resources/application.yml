@@ -3,5 +3,8 @@ spring:
     name: taco-cloud
   thymeleaf:
     cache: false
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
 server:
   port: 8090
