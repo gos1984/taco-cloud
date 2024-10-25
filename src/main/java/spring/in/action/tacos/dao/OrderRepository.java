@@ -1,4 +1,4 @@
-package spring.in.action.tacos.repository;
+package spring.in.action.tacos.dao;
 
 import spring.in.action.tacos.model.TacoOrder;
 

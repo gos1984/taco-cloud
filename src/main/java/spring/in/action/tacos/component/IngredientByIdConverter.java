@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import spring.in.action.tacos.model.Ingredient;
-import spring.in.action.tacos.repository.IngredientRepository;
+import spring.in.action.tacos.dao.IngredientRepository;
 
 @Component
 @AllArgsConstructor

@@ -10,7 +10,7 @@ import spring.in.action.tacos.model.Ingredient;
 import spring.in.action.tacos.model.Taco;
 import spring.in.action.tacos.model.TacoOrder;
 import spring.in.action.tacos.model.Type;
-import spring.in.action.tacos.repository.IngredientRepository;
+import spring.in.action.tacos.dao.IngredientRepository;
 
 import javax.validation.Valid;
 import java.util.List;

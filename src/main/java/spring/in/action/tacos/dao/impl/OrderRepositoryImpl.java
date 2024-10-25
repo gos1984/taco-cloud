@@ -1,4 +1,4 @@
-package spring.in.action.tacos.repository.impl;
+package spring.in.action.tacos.dao.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.asm.Type;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import spring.in.action.tacos.model.IngredientRef;
 import spring.in.action.tacos.model.Taco;
 import spring.in.action.tacos.model.TacoOrder;
-import spring.in.action.tacos.repository.OrderRepository;
+import spring.in.action.tacos.dao.OrderRepository;
 
 import java.sql.Types;
 import java.time.LocalDate;

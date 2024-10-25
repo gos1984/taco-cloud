@@ -1,11 +1,11 @@
-package spring.in.action.tacos.repository.impl;
+package spring.in.action.tacos.dao.impl;
 
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import spring.in.action.tacos.model.Ingredient;
 import spring.in.action.tacos.model.Type;
-import spring.in.action.tacos.repository.IngredientRepository;
+import spring.in.action.tacos.dao.IngredientRepository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

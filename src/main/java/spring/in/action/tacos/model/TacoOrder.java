@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.validation.constraints.Digits;
@@ -13,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
+@Accessors(chain = true)
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
