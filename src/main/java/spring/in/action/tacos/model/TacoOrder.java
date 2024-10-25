@@ -8,19 +8,23 @@ import java.util.ArrayList;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
+@Table
 @Accessors(chain = true)
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private Long id;
-    private LocalDateTime placedAt;
+    private LocalDateTime placedAt = LocalDateTime.now();
 
     @NotBlank(message="Delivery name is required")
     private String deliveryName;

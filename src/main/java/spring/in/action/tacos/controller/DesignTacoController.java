@@ -6,15 +6,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import spring.in.action.tacos.dao.IngredientRepository;
 import spring.in.action.tacos.model.Ingredient;
 import spring.in.action.tacos.model.Taco;
 import spring.in.action.tacos.model.TacoOrder;
 import spring.in.action.tacos.model.Type;
-import spring.in.action.tacos.dao.IngredientRepository;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Slf4j
 @Controller
@@ -62,8 +63,8 @@ public class DesignTacoController {
         return "redirect:/orders/current";
     }
 
-    private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Type type) {
-        return ingredients.stream()
+    private Iterable<Ingredient> filterByType(Iterable<Ingredient> ingredients, Type type) {
+        return StreamSupport.stream(ingredients.spliterator(), false)
                 .filter(x -> type.equals(x.getType()))
                 .collect(Collectors.toList());
     }
